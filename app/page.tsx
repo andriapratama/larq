@@ -67,7 +67,7 @@ export default function Home() {
 
   return (
     <main
-      className="w-full min-h-screen relative overflow-hidden duration-500"
+      className="w-full min-h-screen relative overflow-hidden duration-300 ease-linear transition-all"
       style={{ backgroundColor: data[indexActive].firstColor }}
     >
       <nav className="w-full flex justify-between fixed z-50 top-0 h-[100px] items-center px-10">
@@ -86,8 +86,8 @@ export default function Home() {
       <div
         className={`min-h-screen flex  absolute items-center right-0 ease-linear transition-all ${
           isDetail
-            ? 'aspect-square rounded-l-[600px] z-10 justify-start translate-x-1/2 duration-700'
-            : 'w-1/2 duration-500 justify-center'
+            ? 'aspect-square rounded-l-[600px] z-10 justify-start translate-x-1/2 duration-500'
+            : 'w-1/2 duration-300 justify-center'
         }`}
         style={{ backgroundColor: data[indexActive].secondColor }}
       ></div>
@@ -134,7 +134,7 @@ export default function Home() {
           src={data[indexActive].image}
           alt={data[indexActive].secondName}
           className={`w-[1200px] h-auto object-cover object-center aspect-auto ease-linear transition-all -translate-y-[5%] ${
-            isDetail ? '-translate-x-[60%] duration-700' : 'duration-500'
+            isDetail ? '-translate-x-[60%] duration-500' : 'duration-300'
           }`}
           priority
           width={1200}
@@ -189,7 +189,7 @@ export default function Home() {
         }`}
       >
         <button
-          className="w-[120px] h-[40px] rounded-full font-semibold flex justify-center items-center shadow-custom border-b border-r border-solid border-white/30 duration-500 ease-linear transition-all"
+          className="w-[120px] h-[40px] rounded-full font-semibold flex justify-center items-center shadow-custom border-b border-r border-solid border-white/30 duration-300 ease-linear transition-all"
           style={{
             backgroundColor: data[indexActive].secondColor,
             color: data[indexActive].firstColor,
@@ -218,8 +218,8 @@ export default function Home() {
       </div>
 
       <div
-        className={`w-[900px] absolute left-[47%] -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 duration-500 ease-linear transition-all ${
-          isDetail ? 'opacity-100 delay-700' : 'opacity-0'
+        className={`w-[900px] absolute left-[47%] -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 ease-linear transition-all ${
+          isDetail ? 'opacity-100 delay-500 duration-500' : 'opacity-0'
         }`}
       >
         <h1 className="w-full text-center text-gray-500 text-3xl font-semibold">
